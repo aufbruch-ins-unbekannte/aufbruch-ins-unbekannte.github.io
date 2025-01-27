@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gründe für Migration</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <script>
+      const mainColor1 = "#241ba7";
+      const mainColor2 = "#6644bd";
+      const mainColor3 = "#4f8dde";
+      const mainColor4 = "#35a166";
+    </script>
+
+    <script src="./script/instabilitätscript.js" defer></script>
+    <script src="./script/vertreibungscript.js" defer></script>
+    <script src="./script/wasserstressscript.js" defer></script>
+    <script src="./script/handelscript.js" defer></script>
+    <script src="./script/ukrainescript.js" defer></script>
+
+    <script src="./script/leafletscript.js" defer></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/vtv3wuq.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="loading-screen" style="display: none">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>
