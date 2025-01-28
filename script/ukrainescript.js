@@ -48,7 +48,7 @@ fetch("./europe.geojson")
               style: (feature) => {
                 let countryName = feature.properties.NAME; // Changed to "NAME"
                 // Log the whole properties object for debugging
-                console.log("GeoJSON feature properties:", feature.properties);
+                // console.log("GeoJSON feature properties:", feature.properties);
                 let per1000 = migrationData[countryName]?.per1000 || 0;
 
                 if (countryName === "Ukraine") {

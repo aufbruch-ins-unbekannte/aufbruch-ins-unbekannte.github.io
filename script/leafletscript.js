@@ -141,7 +141,20 @@ const changeInfo = (name) => {
       text: `<div class="textlegend"><span class="mainColorOne  colorlabel"></span > <span class="legendText">Neu angekommene Flüchtlinge/Asylbewerber*innen</span></div>
       <div class="textlegend"><span class="mainColorTwo colorlabel"></span> <span class="legendText">Neu angekommene "refugee returnees", die zuvor in den Sudan geflohen waren und nun in ihre Heimatregionen zurückkehren</span></div>
       <div class="textlegend"><span class="mainColorThree colorlabel"></span> <span class="legendText">Binnenvertriebene im Sudan</span></div>
-      <div class="textlegend"><span class="mainColorFour colorlabel"></span> <span class="legendText">"self-relocated refugees", die zuvor geflohen sind und nun erneut fliehen</span></div>`,
+      <div class="textlegend"><span class="mainColorFour colorlabel"></span> <span class="legendText">"self-relocated refugees", die zuvor geflohen sind und nun erneut fliehen</span></div>
+      <div class="textlegend">
+        <span class="circleWrapper margin">
+          <span class="legendText">Betroffene Personen:</span>
+          
+          <span class="circle groß"></span>
+          <span class="circle mittel"></span> 
+          <span class="circle klein"></span>
+          
+          <span class="circleLabel legendText">1.000.000</span>
+          <span class="circleLabel legendText">300.000</span>
+          <span class="circleLabel legendText">100.000</span>
+        </span>
+      </div>`,
       src: "Stand: Dezember 2024; Quelle: UNHCR",
     },
     handel: {

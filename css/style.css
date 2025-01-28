@@ -384,7 +384,7 @@ h1 {
   height: fit-content;
 }
 
-.ukraineLegendContainer > .margin{
+.ukraineLegendContainer > .margin {
   margin-top: 20px;
 }
 
@@ -409,4 +409,52 @@ h1 {
 .gradientWrapper > .smallText:nth-child(2) {
   display: flex;
   align-items: flex-end; /* Align items at the bottom */
+}
+
+/* ================== Instabilität Sudan ===================*/
+
+.circleWrapper {
+  grid-column: 1 / span 2;
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: 23r 3fr 3fr;
+
+  align-items: end;
+  justify-items: center;
+
+  height: fit-content;
+  max-width: 300px;
+  
+}
+
+.circleWrapper > span:nth-child(1) {
+  grid-column: 1 / span 3;
+  margin-bottom: 10px;
+  font-weight: 700;
+
+  justify-self: left;
+}
+
+.circleWrapper > .circle {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--mainColor1);
+  width: 90px;
+  height: 90px;
+  /* align-self:end; */
+  
+}
+
+.circleWrapper > .groß {
+  width: 90px;
+  height: 90px;
+}
+.circleWrapper > .mittel {
+  width: 45px;
+  height: 45px;
+}
+.circleWrapper > .klein {
+  width: 10px;
+  height: 10px;
 }

@@ -30,9 +30,7 @@ function loadJsonDataToLayerGroup(
     .then((response) => response.json()) // JSON-Daten parsen
     .then((jsonData) => {
       // Füge Marker für jede Region hinzu
-      var maxIndividuals = Math.max(
-        ...jsonData.data.map((region) => parseInt(region.individuals))
-      );
+      var maxIndividuals = 1008654; // Maximalanzahl der betroffenen Personen (für die Skalierung des Radius)
 
       jsonData.data.forEach(function (region) {
         // Berechne den Radius basierend auf der Anzahl der betroffenen Personen
@@ -53,13 +51,23 @@ function loadJsonDataToLayerGroup(
           }
         );
 
+        // Legendenkreisgrößen berechnen
+        var groß =
+          minRadius +
+          (parseInt(1000000) / maxIndividuals) * (maxRadius - minRadius) * 2;
+        var mittel =
+          minRadius +
+          (parseInt(500000) / maxIndividuals) * (maxRadius - minRadius) * 2;
+        var klein =
+          minRadius +
+          (parseInt(100000) / maxIndividuals) * (maxRadius - minRadius) * 2;
+
+        console.log(`groß: ${groß}, mittel: ${mittel}, klein: ${klein}`);
+
         // Popup mit Regionennamen und Anzahl der betroffenen Personen
-        // marker.bindPopup(
-        //   "<b>" +
-        //     region.name +
-        //     "</b><br>Betroffene Personen: " +
-        //     region.individuals
-        // );
+        marker.bindPopup(
+          "<b>" + region.name + "</b><br> Personen: " + region.individuals
+        );
 
         // Füge den Marker zur LayerGroup hinzu
         layerGroup.addLayer(marker);
@@ -72,7 +80,7 @@ function loadJsonDataToLayerGroup(
 
 // Definiere den minimalen und maximalen Radius
 var minRadius = 2; // Minimaler Radius
-var maxRadius = 30; // Maximaler Radius
+var maxRadius = 45; // Maximaler Radius
 
 // LayerGroup für alle Ebenen erstellen
 const instabilitätLayerGroup = L.layerGroup();
