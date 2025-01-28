@@ -1,3 +1,23 @@
+// GeoJSON-Daten für Sudan-Grenzen laden und zur Karte hinzufügen
+fetch("./geoBoundaries-SDN-ADM0.geojson") // Pfad zur GeoJSON-Datei des Sudan
+  .then((response) => response.json())
+  .then((sudanData) => {
+    L.geoJSON(sudanData, {
+      style: function (feature) {
+        return {
+          color: mainColor1, // Farbe der Umrisse
+          weight: 2.5, // Stärke der Umrisse
+          opacity: 1, // Deckkraft der Umrisse
+          fillColor: mainColor1, // Füllfarbe (optional)
+          fillOpacity: 0.1, // Transparenz der Füllung (optional)
+        };
+      },
+    }).addTo(instabilitätLayerGroup); // Hinzufügen der Sudan-Umrisse zur Karte
+  })
+  .catch((error) =>
+    console.error("Fehler beim Laden der Sudan-Grenzdaten:", error)
+  );
+
 // Funktion zum Laden der JSON-Daten für jede Ebene und Hinzufügen zu einer LayerGroup
 function loadJsonDataToLayerGroup(
   url,
@@ -89,23 +109,3 @@ loadJsonDataToLayerGroup(
 
 // LayerGroup zur Karte hinzufügen
 // instabilitätLayerGroup.addTo(map);
-
-// GeoJSON-Daten für Sudan-Grenzen laden und zur Karte hinzufügen
-fetch("./geoBoundaries-SDN-ADM0.geojson") // Pfad zur GeoJSON-Datei des Sudan
-  .then((response) => response.json())
-  .then((sudanData) => {
-    L.geoJSON(sudanData, {
-      style: function (feature) {
-        return {
-          color: "darkgrey", // Farbe der Umrisse
-          weight: 3, // Stärke der Umrisse
-          opacity: 0.5, // Deckkraft der Umrisse
-          fillColor: "rgba(135,206,250,0.5)", // Füllfarbe (optional)
-          fillOpacity: 0, // Transparenz der Füllung (optional)
-        };
-      },
-    }).addTo(instabilitätLayerGroup); // Hinzufügen der Sudan-Umrisse zur Karte
-  })
-  .catch((error) =>
-    console.error("Fehler beim Laden der Sudan-Grenzdaten:", error)
-  );
