@@ -4,12 +4,12 @@
     <style>
       .cls-1 {
         fill: #262626;
-        stroke: #fff;
+
         stroke-miterlimit: 10;
       }
       .cls-2{
         fill: #0F00E0;
-        stroke: #fff;
+
         stroke-miterlimit: 10;
       }
     </style>
