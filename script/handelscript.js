@@ -1,6 +1,3 @@
-
-
-
 const handelLayer = L.layerGroup();
 
 // Immigration data

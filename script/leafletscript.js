@@ -160,7 +160,7 @@ const changeInfo = (name) => {
     handel: {
       headline: "Arbeitsmigration in die USA<br> (G 30.5)",
       subhead:
-        "Die Karte zeigt die 10 Länder mit den meisten Einwanderungen in die USA über sogenannte Employment-Based Visa. Diese ermöglichen Fachkräften, Unternehmern und Investoren, dauerhaft in die USA einzuwandern und werden in folgende Kategorien unterteilt:",
+        "Die Karte zeigt die 10 Länder mit den meisten Einwanderungen in die USA über sogenannte Employment-Based Visa im Jahr 2023. Diese ermöglichen Fachkräften, Unternehmern und Investoren, dauerhaft in die USA einzuwandern und werden in folgende Kategorien unterteilt:",
       text: `
         <div class="textlegend"><span class="mainColorOne colorlabel"></span> <span class="legendText">E1 – Personen mit außergewöhnlichen Fähigkeiten, wie z. B. International anerkannte Wissenschaftler*innen, bestimmte Manager*innen und Führungskräfte</span></div>
         <div class="textlegend"><span class="mainColorTwo colorlabel"></span><span class="legendText">E2 – Personen mit Hochschulabschluss oder besonderen Fähigkeiten und Stellenangebot in den USA.</span></div>
