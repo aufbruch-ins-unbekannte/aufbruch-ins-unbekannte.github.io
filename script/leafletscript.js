@@ -61,10 +61,10 @@ const changeview = (lat, lon, zoom, layerGroup, maxZoom, name, menuType) => {
 const changeMenu = (menuType) => {
   graphicsMenubar.innerHTML =
     menuType === "handelMenu"
-      ? `<div class='menu handelMenu' id='handelMenuH1' onclick='highlightVisaType("H1 Visa")'>H 1</div>
-     <div class='menu handelMenu' id='handelMenuH2' onclick='highlightVisaType("H2 Visa")'>H 2</div>
-     <div class='menu handelMenu' id='handelMenuH3' onclick='highlightVisaType("H3 Visa")'>H 3</div>
-     <div class='menu handelMenu' id='handelMenuH4' onclick='highlightVisaType("H4 Visa")'>H 4</div>`
+      ? `<div class='menu handelMenu' id='handelMenuH1' onclick='highlightVisaType("H1 Visa")'>E1</div>
+     <div class='menu handelMenu' id='handelMenuH2' onclick='highlightVisaType("H2 Visa")'>E2</div>
+     <div class='menu handelMenu' id='handelMenuH3' onclick='highlightVisaType("H3 Visa")'>E3</div>
+     <div class='menu handelMenu' id='handelMenuH4' onclick='highlightVisaType("H4 Visa")'>E4</div>`
       : "";
 };
 // ============================= Legenden und Infoebene =================================
